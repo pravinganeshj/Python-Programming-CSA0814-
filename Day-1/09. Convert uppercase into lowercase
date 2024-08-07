@@ -1,0 +1,36 @@
+code:
+# Input from user
+sentence = input("Enter a sentence: ")
+
+# Convert uppercase to lowercase and lowercase to uppercase
+converted_sentence = ""
+for char in sentence:
+    if char.isupper():
+        converted_sentence += char.lower()
+    elif char.islower():
+        converted_sentence += char.upper()
+    else:
+        converted_sentence += char
+
+# Split the sentence into words
+words = sentence.split()
+
+# Count the number of words
+word_count = len(words)
+
+# Count the number of words starting with 'A' or 'a'
+words_starting_with_a = sum(1 for word in words if word.lower().startswith('a'))
+
+# Print the converted sentence
+print("Converted sentence:", converted_sentence)
+
+# Print the number of words
+print("Number of words:", word_count)
+
+# Print the number of words starting with 'A' or 'a'
+print("Number of words starting with 'A' or 'a':", words_starting_with_a)
+
+
+output:
+enter a sentence: Hello how Are You
+converted sentence: hELLO HOW aRE yOU
