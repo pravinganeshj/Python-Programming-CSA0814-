@@ -1,0 +1,10 @@
+code:
+sentence=input("enter the sentence:")
+w=sentence.split()
+l=w[-1]
+lenght=len(l)
+print(lenght)
+
+output:
+enter a sentence:hii hello, welcome
+lenght=6
