@@ -1,0 +1,36 @@
+code:
+# Input from user
+num1 = int(input("Enter the first number: "))
+num2 = int(input("Enter the second number: "))
+num3 = int(input("Enter the third number: "))
+
+# Find the GCD of two numbers
+a, b = num1, num2
+while b != 0:
+    a, b = b, a % b
+gcd12 = a
+
+# Find the GCD of the result and the third number
+a, b = gcd12, num3
+while b != 0:
+    a, b = b, a % b
+gcd = a
+
+# Find the LCM of two numbers using their GCD
+lcm12 = (num1 * num2) // gcd12
+
+# Find the LCM of the result and the third number
+lcm = (lcm12 * num3) // gcd
+
+# Print the GCD and LCM
+print("The GCD of", num1, num2, "and", num3, "is:", gcd)
+print("The LCM of", num1, num2, "and", num3, "is:", lcm)
+
+
+output:
+enter first number:1
+enter second number:2
+enter third number:3
+
+the gcd of 1,2 and 3 is:1
+the lcm of 1,2 and 3 is:1
