@@ -1,0 +1,16 @@
+code:
+decimal_number = int(input("Enter a decimal number: "))
+
+binary_representation = ""
+current_number = decimal_number
+
+if decimal_number == 0:
+    binary_representation = "0"
+else:
+    # Convert decimal to binary
+    while current_number > 0:
+        remainder = current_number % 2
+        binary_representation = str(remainder) + binary_representation
+        current_number = current_number // 2
+
+print(f"Binary representation of {decimal_number} is: {binary_representation}")
