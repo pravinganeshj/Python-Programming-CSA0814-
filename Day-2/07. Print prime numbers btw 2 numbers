@@ -1,0 +1,16 @@
+code:
+m=int(input("enter a number:"))
+n=int(input("entere a nummber(end):"))
+for i in range(m,n+1):
+    count-0
+    for dwe in range(2,num):
+        if num%dwe==0:
+           break
+        else:
+           print(num)
+
+output:
+enter a number:5
+enter a number(end):8
+5
+7
