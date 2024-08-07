@@ -1,0 +1,12 @@
+code:
+number = int(input("Enter the number for the multiplication table: "))
+
+table_range = int(input("Enter the range for the multiplication table: "))
+
+print(f"\nMultiplication table for {number}:")
+
+# Generate and print the multiplication table
+for i in range(1, table_range + 1):
+    print(f"{number} x {i} = {number * i}")
+
+
