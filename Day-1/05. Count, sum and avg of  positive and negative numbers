@@ -1,0 +1,41 @@
+positive_numbers = []
+negative_numbers = []
+
+while True:
+    number = float(input("Enter a number (-1 to stop): "))
+
+    if number == -1:
+        break
+    elif number > 0:
+        positive_numbers.append(number)
+    elif number < 0:
+        negative_numbers.append(number)
+
+pos_count = len(positive_numbers)
+neg_count = len(negative_numbers)
+
+pos_sum = sum(positive_numbers)
+neg_sum = sum(negative_numbers)
+
+pos_avg = pos_sum / pos_count if pos_count != 0 else 0
+neg_avg = neg_sum / neg_count if neg_count != 0 else 0
+
+print("\nSummary:")
+print(f"Positive numbers count: {pos_count}")
+print(f"Negative numbers count: {neg_count}")
+print(f"Sum of positive numbers: {pos_sum}")
+print(f"Sum of negative numbers: {neg_sum}")
+print(f"Average of positive numbers: {pos_avg}")
+print(f"Average of negative numbers: {neg_avg}")
+
+output:
+enter a number (-1 to stop):2
+enter a number (-1 to stop):3
+enter a number (-1 to stop):4
+enter a number (-1 to stop): -1
+
+positive number count: 3
+negative number count: 0
+sum of positive numbers: 9.0
+sum of negative numbers: 0
+
