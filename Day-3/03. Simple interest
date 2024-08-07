@@ -1,0 +1,16 @@
+code:
+principal = float(input("Enter the principal amount: "))
+
+rate_input = input("Enter the rate of interest (default is 5.0%): ")
+rate = float(rate_input) if rate_input else 5.0
+
+time_input = input("Enter the time period in years (default is 1 year): ")
+time = float(time_input) if time_input else 1
+
+simple_interest = (principal * rate * time) / 100
+
+print(f"\nSimple Interest: {simple_interest}")
+
+output:
+simple interest: 1000*5*1
+5000
