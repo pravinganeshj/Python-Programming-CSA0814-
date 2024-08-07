@@ -1,0 +1,14 @@
+code:
+num=float(input("entera num:"))
+sq=num**2
+sq_r=num**(1/2)
+cu_r=num**(1/3)
+print(sq)
+print(sq_r)
+print(cu_r)
+
+output:
+enter a num:5
+25.0
+2.236
+1.709
