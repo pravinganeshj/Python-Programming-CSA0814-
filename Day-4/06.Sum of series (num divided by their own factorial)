@@ -1,0 +1,12 @@
+CODES:
+import math
+N = int(input("Enter the value of N: "))
+sum_series = 0
+for i in range(1, N + 1):
+    sum_series += i / math.factorial(i)
+print("The sum of the series is:",sum_series)
+
+
+OUTPUT:
+Enter the value of N: 5
+The sum of the series is: 2.708333333333333
