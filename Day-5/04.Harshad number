@@ -1,0 +1,15 @@
+CODES:
+number = 18 
+digit_sum = 0
+temp_number = number
+while temp_number > 0:
+    digit_sum += temp_number % 10
+    temp_number //= 10
+if number % digit_sum == 0:
+    print(number,"is a Harshad number.")
+else:
+    print(number,"is not a Harshad number.")
+
+
+OUTPUT:
+18 is a Harshad number.
