@@ -1,0 +1,14 @@
+CODES:
+number = 12345
+while number >= 10:
+    total = 0
+    n = number
+    while n > 0:
+        total += n % 10
+        n //= 10
+    number = total
+print(number)
+
+
+OUTPUT:
+6
