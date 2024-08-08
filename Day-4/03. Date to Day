@@ -1,0 +1,12 @@
+CODES:
+import datetime
+date_input = input("Enter a date (YYYY-MM-DD): ")
+year, month, day = map(int, date_input.split('-'))
+date_object = datetime.datetime(year, month, day)
+day_of_week = date_object.strftime("%A")
+print("The day of the week is:", day_of_week)
+
+
+OUTPUT:
+Enter a date (YYYY-MM-DD): 2024-08-07
+The day of the week is: Wednesday
