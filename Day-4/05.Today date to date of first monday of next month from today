@@ -1,0 +1,23 @@
+CODES:
+import datetime
+date_input = input("Enter a date (YYYY-MM-DD): ")
+year, month, day = map(int, date_input.split('-'))
+date = datetime.date(year, month, day)
+if month == 12:
+    next_month = 1
+    next_year = year + 1
+else:
+    next_month = month + 1
+    next_year = year
+first_day_of_next_month = datetime.date(next_year, next_month, 1)
+day_of_week = first_day_of_next_month.weekday() 
+days_until_monday = (7 - day_of_week) % 7
+if days_until_monday == 0:
+    days_until_monday = 7
+first_monday = first_day_of_next_month + datetime.timedelta(days=days_until_monday)
+print("The first Monday of the next month is:", first_monday)
+
+
+OUTPUT:
+Enter a date (YYYY-MM-DD): 2024-08-07
+The first Monday of the next month is: 2024-09-02
