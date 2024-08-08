@@ -1,0 +1,17 @@
+CODES:
+array = [1, 2, 3, 4, 5]
+position = 2  # Position where the element should be inserted (0-based index)
+element = 99  # Element to insert
+array.insert(position, element)
+print("Array after inserting at a specific position:", array)
+
+
+array = [1, 2, 3, 4, 5]
+element = 99  # Element to append
+array.append(element)
+print("Array after appending an element:", array)
+
+
+OUTPUT:
+Array after inserting at a specific position: [1, 2, 99, 3, 4, 5]
+Array after appending an element: [1, 2, 3, 4, 5, 99]
