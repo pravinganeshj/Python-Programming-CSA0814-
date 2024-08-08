@@ -1,0 +1,12 @@
+CODES:
+arr = [12, 35, 1, 10, 34, 1]
+arr.sort()
+first_largest = arr[-1]
+second_largest = arr[-2]
+print("First largest element:", first_largest)
+print("Second largest element:", second_largest)
+
+
+OUTPUT:
+First largest element: 35
+Second largest element: 34
