@@ -1,0 +1,17 @@
+CODES:
+num = int(input("Enter a number: ").strip())
+ori_num = num
+reverse = 0
+while num > 0:
+    rem = num % 10
+    reverse = (reverse * 10) + rem
+    num //= 10
+if ori_num == reverse:
+    print(ori_num, "is a palindrome.")
+else:
+    print(ori_num, "is not a palindrome.")
+
+
+OUTPUT:
+Enter a number: 121
+121 is a palindrome.
