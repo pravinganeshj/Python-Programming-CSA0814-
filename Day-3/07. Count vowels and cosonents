@@ -1,0 +1,18 @@
+CODES:
+sentence = "Hello, World!"
+vowels = "aeiouAEIOU"
+vowel_count = 0
+consonant_count = 0
+for char in sentence:
+    if char.isalpha():  
+        if char in vowels:
+            vowel_count += 1
+        else:
+            consonant_count += 1
+print("Number of vowels:", vowel_count)
+print("Number of consonants:", consonant_count)
+
+
+OUTPUT:
+Number of vowels: 3
+Number of consonants: 7
