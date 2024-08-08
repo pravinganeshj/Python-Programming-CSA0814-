@@ -1,0 +1,13 @@
+CODES:
+number = 25 
+square = number * number
+number_str = str(number)
+square_str = str(square)
+if square_str.endswith(number_str):
+    print(number,"is an automorphic number.")
+else:
+    print(number,"is not an automorphic number.")
+
+
+OUTPUT:
+25 is an automorphic number.
