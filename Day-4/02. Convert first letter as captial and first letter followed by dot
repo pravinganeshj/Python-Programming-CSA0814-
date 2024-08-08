@@ -1,0 +1,15 @@
+CODES:
+sentence = input("Enter a sentence: ")
+titled_sentence = sentence.title()
+initials = ""
+words = titled_sentence.split()
+for word in words:
+    if word:  # Check if the word is not empty
+        initials += word[0] + "."
+print("Titled Sentence:",titled_sentence)
+print("Initials:",initials)
+
+
+OUTPUT:
+Titled Sentence: World Health Organization
+Initials: W.H.O.
