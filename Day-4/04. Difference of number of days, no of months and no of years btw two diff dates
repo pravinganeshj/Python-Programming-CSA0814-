@@ -1,0 +1,26 @@
+CODES:
+import datetime
+start_date_input = input("Enter the start date (YYYY-MM-DD): ")
+start_year, start_month, start_day = map(int, start_date_input.split('-'))
+start_date = datetime.date(start_year, start_month, start_day)
+end_date_input = input("Enter the end date (YYYY-MM-DD): ")
+end_year, end_month, end_day = map(int, end_date_input.split('-'))
+end_date = datetime.date(end_year, end_month, end_day)
+delta = end_date - start_date
+days = delta.days
+years = end_date.year - start_date.year
+months = end_date.month - start_date.month
+if months < 0:
+    months += 12
+    years -= 1
+print("Number of days:",days)
+print("Number of months:",months)
+print("Number of years:"years)
+
+
+OUTPUT:
+Enter the start date (YYYY-MM-DD): 2023-01-01
+Enter the end date (YYYY-MM-DD): 2024-08-07
+Number of days: 582
+Number of months: 7
+Number of years: 1
