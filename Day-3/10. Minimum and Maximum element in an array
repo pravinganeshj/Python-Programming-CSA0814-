@@ -1,0 +1,11 @@
+CODES:
+array = [12, 35, 1, 10, 34, 1]
+min_element = min(array)
+max_element = max(array)
+print("Minimum element:", min_element)
+print("Maximum element:", max_element)
+
+
+OUTPUT:
+Minimum element: 1
+Maximum element: 35
