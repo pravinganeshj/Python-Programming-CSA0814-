@@ -1,0 +1,20 @@
+CODES:
+numbers = input("Enter numbers separated by spaces: ").split()
+numbers = [int(num) for num in numbers]
+print("List:",numbers)
+sum_even_squares = 0
+sum_odd_squares = 0
+for num in numbers:
+    if num % 2 == 0:
+        sum_even_squares += num ** 2
+    else:
+        sum_odd_squares += num ** 2
+print("Sum of squares of even numbers:", sum_even_squares)
+print("Sum of squares of odd numbers:", sum_odd_squares)
+
+
+OUTPUT:
+Enter numbers separated by spaces: 10 15 22 33
+List:[10, 15, 22, 33]
+Sum of squares of even numbers: 584
+Sum of squares of odd numbers: 1154
