@@ -1,0 +1,13 @@
+upper, lower, digits = [], [], []
+
+while (char := input("Enter a character (* to stop): ")) != '*':
+    if char.isupper():
+        upper.append(char)
+    elif char.islower():
+        lower.append(char)
+    elif char.isdigit():
+        digits.append(char)
+
+print("Uppercase Letters:", upper)
+print("Lowercase Letters:", lower)
+print("Numbers:", digits)
