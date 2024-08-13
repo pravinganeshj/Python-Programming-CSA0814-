@@ -1,0 +1,18 @@
+CODES:
+sentence = "Python Code"
+sentence = sentence.lower()
+
+char_set = set()
+
+for char in sentence:
+    if char.isalpha():
+        if char in char_set:
+            print(False)
+            break
+        char_set.add(char)
+    else:
+        print(True)
+
+
+OUTPUT:
+True
