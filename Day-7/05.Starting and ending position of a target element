@@ -1,0 +1,15 @@
+CODES:
+lst = [1, 2, 3, 4, 4, 5, 4, 6]
+target = 4
+if target in lst:
+    start_pos = lst.index(target)
+    end_pos = len(lst) - 1 - lst[::-1].index(target)
+    print(f"Starting position: {start_pos}")
+    print(f"Ending position: {end_pos}")
+else:
+    print("Target element not found in the list")
+
+
+OUTPUT:
+Starting position: 3
+Ending position: 6
