@@ -1,0 +1,9 @@
+CODES:
+element = 5
+lst = [1, 2, 3, 5, 5, 5, 6, 7]
+frequency = lst.count(element)
+print(frequency)
+
+
+OUTPUT:
+3
