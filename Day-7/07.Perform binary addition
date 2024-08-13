@@ -1,0 +1,11 @@
+bin1 = input("Enter the first binary number: ")
+bin2 = input("Enter the second binary number: ")
+
+sum_result = bin(int(bin1, 2) + int(bin2, 2))
+
+print(f"The sum of {bin1} and {bin2} is: {sum_result[2:]}")
+
+output:
+Enter the first binary number:1
+Enter the second binary number:1
+result: 10
