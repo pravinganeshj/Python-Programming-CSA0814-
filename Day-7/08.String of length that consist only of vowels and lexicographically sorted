@@ -1,0 +1,13 @@
+import math
+
+# Number of distinct vowels
+vowels_count = 5
+
+# Input: Length of the string
+n = int(input("Enter the length of the string: "))
+
+# Calculate the number of lexicographically sorted vowel strings of length n
+result = math.comb(n + vowels_count - 1, vowels_count - 1)
+
+# Output the result
+print(f"The number of lexicographically sorted strings of length {n} that consist only of vowels is: {result}")
