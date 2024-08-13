@@ -1,0 +1,23 @@
+
+CODES:
+strings = ["Listen", "Silent", "Hello", "OlelH", "World", "DorlW"]
+
+anagram_groups = {}
+
+for s in strings:
+    normalized = ''.join(sorted(s.replace(" ", "").lower()))
+    
+    if normalized in anagram_groups:
+        anagram_groups[normalized].append(s)
+    else:
+        anagram_groups[normalized] = [s]
+
+for group in anagram_groups.values():
+    if len(group) > 1:
+        print("Anagrams:", group)
+
+
+OUTPUT:
+Anagrams: ['Listen', 'Silent']
+Anagrams: ['Hello', 'OlelH']
+Anagrams: ['World', 'DorlW']
