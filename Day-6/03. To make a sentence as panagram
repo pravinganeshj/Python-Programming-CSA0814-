@@ -1,0 +1,18 @@
+CODES:
+import string
+
+sentence = "Hello world"
+sentence_lower = sentence.lower()
+missing_letters = set(string.ascii_lowercase) - set(sentence_lower)
+
+if missing_letters:
+    print("Missing letters:", ''.join(sorted(missing_letters)))
+    sentence += ''.join(sorted(missing_letters))
+    print("Modified sentence:", sentence)
+else:
+    print("The sentence is already a pangram.")
+
+
+OUTPUT:
+Missing letters: abcdefghijklmnpqrstuvwxyz
+Modified sentence: Hello worldabcdefghijklmnopqrstuvwxyz
