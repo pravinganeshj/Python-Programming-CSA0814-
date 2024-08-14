@@ -1,0 +1,14 @@
+code:
+haystack1 = "hello world"
+needle1 = "world"
+index1 = haystack1.find(needle1)
+print(index1) 
+
+haystack2 = "OpenAI is great"
+needle2 = "AI"
+index2 = haystack2.find(needle2)
+print(index2)  
+
+output:
+6
+4
