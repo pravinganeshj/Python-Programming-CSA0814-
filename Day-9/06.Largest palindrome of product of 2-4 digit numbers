@@ -1,0 +1,21 @@
+max_palindrome = 0
+factor1 = 0
+factor2 = 0
+
+for i in range(1000, 10000):
+    for j in range(i, 10000):  # Start from i to avoid redundant calculations
+        product = i * j
+
+        product_str = str(product)
+        if product_str == product_str[::-1]:  # Check if the string is the same forwards and backwards
+            if product > max_palindrome:
+                max_palindrome = product
+                factor1 = i
+                factor2 = j
+
+print(f"Largest palindrome made from the product of two 4-digit numbers is {max_palindrome}.")
+print(f"It is the product of {factor1} and {factor2}.")
+
+output:
+Largest palindrome made from the product of two 4-digit numbers is 99000099.
+It is the product of 9999 and 9999.
