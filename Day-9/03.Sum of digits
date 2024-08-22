@@ -1,0 +1,11 @@
+number = input("Enter a number: ")
+if number.startswith('-'):
+    number = number[1:]
+
+digit_sum = sum(int(digit) for digit in number if digit.isdigit())
+
+print("Sum of digits:", digit_sum)
+
+output:
+1234
+Sum of digits: 10
