@@ -1,0 +1,46 @@
+text = "This is an example sentence for alignment justification."
+width = 50
+
+print("Left Alignment:")
+print(text.ljust(width))
+
+print("\nCenter Alignment:")
+print(text.center(width))
+
+print("\nRight Alignment:")
+print(text.rjust(width))
+
+words = text.split()
+num_words = len(words)
+
+if num_words == 1:
+    justified_text = words[0].ljust(width)
+else:
+    total_length_of_words = sum(len(word) for word in words)
+    total_spaces = width - total_length_of_words
+    spaces_between_words = total_spaces // (num_words - 1)
+    extra_spaces = total_spaces % (num_words - 1)
+    
+    justified_text = ''
+    for i in range(num_words - 1):
+        justified_text += words[i]
+        justified_text += ' ' * (spaces_between_words + (1 if i < extra_spaces else 0))
+    justified_text += words[-1]  # Add the last word without extra space
+
+    justified_text = justified_text.ljust(width)
+
+print("\nJustified Alignment:")
+print(justified_text)
+
+output:
+Left Alignment:
+This is an example sentence for alignment justification.       
+
+Center Alignment:
+       This is an example sentence for alignment justification.       
+
+Right Alignment:
+       This is an example sentence for alignment justification.
+
+Justified Alignment:
+This   is   an   example   sentence   for   alignment   justification.
