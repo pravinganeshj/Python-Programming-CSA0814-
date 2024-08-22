@@ -1,0 +1,20 @@
+sequence = [1, 2, 3, 5, 8, 13, 21]  # Example sequence
+
+is_additive = True
+
+n = len(sequence)
+
+if n < 3:
+    is_additive = True
+else:
+    # Check if each number (starting from the third one) is the sum of the two preceding numbers
+    for i in range(2, n):
+        if sequence[i] != sequence[i-1] + sequence[i-2]:
+            is_additive = False
+            break
+
+print("The sequence is additive." if is_additive else "The sequence is not additive.")
+
+output:
+[1, 2, 3, 5, 8, 13, 21]
+The sequence is additive.
