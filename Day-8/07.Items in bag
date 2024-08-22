@@ -1,0 +1,38 @@
+items = [
+    (2, 3, 50),
+    (1, 2, 20),
+    (3, 4, 60),
+    (2, 1, 30)
+]
+
+capacity = 5
+items_with_ratios = [(item[0], item[1], item[2], item[2] / item[1]) for item in items]
+
+items_with_ratios.sort(key=lambda x: x[3], reverse=True)
+
+total_profit = 0
+selected_items = []
+
+for item in items_with_ratios:
+    weight, volume, profit, ratio = item
+    if capacity >= volume:
+        # Take the item fully
+        capacity -= volume
+        total_profit += profit
+        selected_items.append((weight, volume, profit))
+    else:
+        # If the item cannot be fully taken due to capacity constraints, break the loop
+        break
+
+print("Selected items (weight, volume, profit):")
+for item in selected_items:
+    print(f"({item[0]}, {item[1]}, {item[2]})")
+
+print("Total profit:", total_profit)
+
+output:
+Selected items (weight, volume, profit):
+(3, 4, 60)
+(2, 1, 30)
+Total profit: 90
+
