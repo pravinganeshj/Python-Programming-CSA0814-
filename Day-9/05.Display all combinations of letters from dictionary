@@ -1,0 +1,33 @@
+import itertools
+
+key1 = ['A', 'B']
+key2 = ['1', '2']
+key3 = ['X', 'Y']
+key4 = ['L', 'M']
+
+keys = [key1, key2, key3, key4]
+t
+combinations = list(itertools.product(*keys))
+
+print("All combinations:")
+for combination in combinations:
+    print(''.join(combination))
+
+output:
+All combinations:
+A1XL
+A1XM
+A1YL
+A1YM
+A2XL
+A2XM
+A2YL
+A2YM
+B1XL
+B1XM
+B1YL
+B1YM
+B2XL
+B2XM
+B2YL
+B2YM
