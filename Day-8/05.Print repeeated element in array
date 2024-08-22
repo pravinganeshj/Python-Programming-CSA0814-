@@ -1,0 +1,21 @@
+from collections import Counter
+
+input_array = input("Enter an array of numbers separated by spaces: ")
+
+array = list(map(int, input_array.split()))
+
+counter = Counter(array)
+
+repeated_element = None
+for element, count in counter.items():
+    if count > 1:
+        repeated_element = element
+        break
+
+if repeated_element is not None:
+    print("The repeated element is:", repeated_element)
+else:
+    print("No element is repeated.")
+
+output:
+The repeated element is: 2
