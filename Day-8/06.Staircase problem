@@ -1,0 +1,21 @@
+def count_ways_to_top(n):
+    if n == 0:
+        return 1  # There's one way to stay at the ground (do nothing)
+    elif n == 1:
+        return 1  # Only one way to reach the first step
+    
+    ways = [0] * (n + 1)
+    
+    ways[0] = 1  # One way to be on the ground (no steps)
+    ways[1] = 1  # One way to reach the first step
+   
+    for i in range(2, n + 1):
+        ways[i] = ways[i - 1] + ways[i - 2]
+    
+    return ways[n]
+
+n = int(input("Enter the number of steps: "))
+print("Number of distinct ways to reach the top:", count_ways_to_top(n))
+
+output:
+Number of distinct ways to reach the top: 5
