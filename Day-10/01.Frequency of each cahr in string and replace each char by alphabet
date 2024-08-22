@@ -1,0 +1,25 @@
+from collections import Counter
+
+input_string = "hello world"
+
+frequency = Counter(input_string)
+
+result = ''
+
+for char in input_string:
+    if char.isalpha():  # Check if the character is a letter
+        # Determine the base for shifting ('a' for lowercase, 'A' for uppercase)
+        base = ord('a') if char.islower() else ord('A')
+        # Calculate the new character by shifting in the alphabet
+        new_char = chr(base + (ord(char) - base + frequency[char]) % 26)
+        result += new_char
+    else:
+        # Keep non-alphabet characters unchanged
+        result += char
+
+print("Original string:", input_string)
+print("Transformed string:", result)
+
+output;
+Original string: hello world
+Transformed string: hfnos xpsme
