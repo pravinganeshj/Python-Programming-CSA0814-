@@ -1,0 +1,16 @@
+from collections import Counter
+
+string1 = "hello"
+string2 = "helicopter"
+count1 = Counter(string1)
+count2 = Counter(string2)
+
+matches = 0
+for char in count1:
+    if char in count2:
+        matches += min(count1[char], count2[char])
+
+print("Number of matching characters:", matches)
+
+output:
+Number of matching characters: 4
