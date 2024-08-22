@@ -1,0 +1,25 @@
+sequence = [2, 6, 18, 54]  # Example sequence
+
+is_geometric = True
+
+n = len(sequence)
+s
+if n < 2:
+    is_geometric = True  # Any sequence with fewer than 2 elements is trivially geometric
+else:
+    if sequence[0] == 0:
+        # Handle case where the first term is zero (no valid ratio)
+        is_geometric = False
+    else:
+        common_ratio = sequence[1] / sequence[0]
+        # Check if each number (starting from the second one) maintains the common ratio
+        for i in range(1, n - 1):
+            if sequence[i] == 0 or (sequence[i + 1] / sequence[i]) != common_ratio:
+                is_geometric = False
+                break
+
+print("The sequence is geometric." if is_geometric else "The sequence is not geometric.")
+
+output:
+[2, 6, 18, 54]
+The sequence is geometric.
