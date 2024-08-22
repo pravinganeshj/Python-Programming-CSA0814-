@@ -1,0 +1,20 @@
+input_string = input("Enter a string: ")
+
+vowels = "aeiouAEIOU"
+
+result = ''
+
+for i in range(len(input_string)):
+    result += input_string[i]  # Add the current character to the result
+    if i < len(input_string) - 1:  # Check if not the last character
+        # Check if the current character and the next character are vowels
+        if input_string[i] in vowels:
+            if input_string[i + 1] in vowels:
+                result += '^'
+            else:
+                result += '_'
+
+print("Transformed string:", result)
+
+output:
+Transformed string: hello^_w^o^rld
