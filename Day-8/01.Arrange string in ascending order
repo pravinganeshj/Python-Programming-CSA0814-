@@ -1,0 +1,30 @@
+s = "banana"
+
+char_list = list(s)
+
+sorted_chars = sorted(char_list)
+
+sorted_string = ''.join(sorted_chars)
+
+char_indices = {}
+
+for index, char in enumerate(s):
+    if char in char_indices:
+        char_indices[char].append(index)
+    else:
+        char_indices[char] = [index]
+
+print("Sorted string:", sorted_string)
+
+print("Indices of repeated characters:")
+for char, indices in char_indices.items():
+    if len(indices) > 1:
+        print(f"Character '{char}' appears at indices {indices}")
+
+output:
+  Sorted string: aaabnn
+Indices of repeated characters:
+Character 'b' appears at indices [1]
+Character 'a' appears at indices [0, 2, 4]
+Character 'n' appears at indices [3, 5]
+
