@@ -1,0 +1,31 @@
+flat_list = [3, 4, 6, 2, 7, 6, 8, 5, 9, 3]
+
+triangle = []
+index = 0
+row = 1
+while index < len(flat_list):
+    triangle.append(flat_list[index:index + row])
+    index += row
+    row += 1
+
+print("Triangle:")
+for row in triangle:
+    print(row)
+max_path_sums = triangle[-1]
+p
+for i in range(len(triangle) - 2, -1, -1):
+    for j in range(len(triangle[i])):
+        # Update the maximum path sum for each element
+        max_path_sums[j] = triangle[i][j] + max(max_path_sums[j], max_path_sums[j + 1])
+max_total = max_path_sums[0]
+
+print("Maximum total from top to bottom:", max_total)
+
+output:
+Triangle:
+[3]
+[4, 6]
+[2, 7, 6]
+[8, 5, 9, 3]
+
+Maximum total from top to bottom: 23
