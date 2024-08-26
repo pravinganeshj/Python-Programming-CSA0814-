@@ -1,0 +1,15 @@
+# Original list of numbers
+numbers = [1, 2, 3, 4, 5]
+
+# Step 1: Square all the elements
+squared_numbers = map(lambda x: x**2, numbers)
+
+# Step 2: Filter out the squares that are even numbers
+even_squares = filter(lambda x: x % 2 == 0, squared_numbers)
+
+# Convert the filter object to a list and print the result
+result = list(even_squares)
+print(result)
+
+output:
+[4, 16]
