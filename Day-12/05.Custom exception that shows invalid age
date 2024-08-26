@@ -1,0 +1,19 @@
+# Define the custom exception class
+class InvalidAgeError(Exception):
+    pass
+
+# List of ages to validate
+ages = [25, 15, 101, 30]
+
+# Validate each age
+for age in ages:
+    if age < 18 or age > 100:
+        print(f"Invalid age: {age}. Age must be between 18 and 100.")
+    else:
+        print(f"Age {age} is valid.")
+
+output:
+Age 25 is valid.
+Invalid age: 15. Age must be between 18 and 100.
+Invalid age: 101. Age must be between 18 and 100.
+Age 30 is valid.
