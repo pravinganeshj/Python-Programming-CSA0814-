@@ -1,0 +1,19 @@
+# List of dictionaries to sort
+list_of_dicts = [
+    {'name': 'Alice', 'age': 30},
+    {'name': 'Bob', 'age': 25},
+    {'name': 'Charlie', 'age': 35}
+]
+
+# Sort the list of dictionaries based on the value of the 'age' key
+sorted_list = sorted(list_of_dicts, key=lambda x: x['age'])
+
+# Print the sorted list
+print(sorted_list)
+
+output:
+[
+    {'name': 'Bob', 'age': 25},
+    {'name': 'Alice', 'age': 30},
+    {'name': 'Charlie', 'age': 35}
+]
