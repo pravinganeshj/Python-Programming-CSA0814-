@@ -1,0 +1,9 @@
+# Number of elements you want in the Fibonacci sequence
+num_elements = 10
+
+# Create the generator
+fib_gen = fibonacci_generator(num_elements)
+
+# Iterate over the generator and print the values
+for number in fib_gen:
+    print(number)
