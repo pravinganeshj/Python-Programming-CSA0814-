@@ -1,0 +1,17 @@
+CODES:
+arr = [3, 3, 4, 2, 4, 4, 2, 4, 4]
+n = len(arr)
+candidate = None
+count = 0
+for num in arr:
+    if count == 0:
+        candidate = num
+    count += (1 if num == candidate else -1)
+if arr.count(candidate) > n // 2:
+    print("The majority element is:", candidate)
+else:
+    print("There is no majority element.")
+
+
+OUTPUT:
+The majority element is: 4
